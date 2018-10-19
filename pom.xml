@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.jwebcoder</groupId>
-    <artifactId>groceryzuul</artifactId>
+    <artifactId>grocery-zuul</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>Grocery-Zuul</name>
+    <name>grocery-zuul</name>
     <description>个人网站微服务拆分中的路由微服务</description>
 
     <parent>
