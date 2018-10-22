@@ -7,6 +7,27 @@ spring:
   application:
     name: groceryZuul
 
+#路由配置
+zuul:
+  routes:
+    auth:
+      #Spring Cloud系列之客户端请求带“Authorization”请求头,经过zuul转发后丢失了,所以将sensitive-headers置为空，将custom-sensitive-headers置为true
+      sensitive-headers:
+      custom-sensitive-headers: true
+      #path来配置路由，serviceId配置路由到的服务
+      path: /auth/**
+      serviceId: groceryauth
+    main:
+      sensitive-headers:
+      custom-sensitive-headers: true
+      path: /main/**
+      serviceId: grocerymain
+    static:
+      sensitive-headers:
+      custom-sensitive-headers: true
+      path: /static/**
+      serviceId: grocerystatic
+
 ---
 #服务注册中心端口号
 server:
